@@ -1,0 +1,262 @@
+* 
+{
+margin: 0;
+padding: 0;
+}
+html
+{
+scroll-behavior: smooth;
+}
+body
+{
+  scroll-behavior: smooth;
+}
+.title
+{
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+padding: 10px;
+width: 100%;
+height: 200px;
+margin-bottom: 0;
+background-color: black;
+box-shadow: grey -5px 5px 20px;
+display: grid;
+grid-template-columns: 0.8fr 3fr 4fr;
+grid-template-rows: auto;
+grid-template-areas:
+    "LOGO OTHER THING"
+}
+.logo
+{
+grid-area: LOGO;
+justify-self: right;
+align-self: center;
+padding-bottom: 20px;
+}
+.other
+{
+grid-area: OTHER;
+font-size: 30px;
+justify-self: left;
+align-self: baseline;
+line-height: 190px; 
+text-align: center; 
+font-size: 7vw;
+}
+.thing
+{
+grid-area: THING;
+font-size: 10px;
+align-self: baseline;
+line-height: 190px;
+}
+a:link{
+padding-right: 5%;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+color: white;
+text-decoration: none;
+}
+a:visited
+{
+color: white;
+}
+a:hover
+{  
+color: darkgrey;
+}
+.border
+{    
+background: linear-gradient(to right, white ,grey,grey,grey,grey,grey,grey,grey,grey,grey,grey,grey,grey,grey,grey,grey,grey,grey,white);
+height: 3px;
+width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+}
+#times
+{
+height: 200px;
+width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+}
+.grid
+{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+/*grid-template-columns: minmax(1fr,1fr);*/
+grid-template-rows: minmax(190px,190px);
+grid-column-gap: 10px;
+margin: 1%;
+}
+.card
+{
+display: grid;
+justify-items: center;
+align-items: center;
+font-size: 30px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: left;
+border-right: solid gray 3px;
+}
+footer
+{
+color: white; 
+margin-top: 20px;
+position: relative;
+width: 100%;
+padding-bottom: 10vw;
+background-color: black;
+bottom: 0;
+left: 0;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+justify-items: center;
+text-align: center;
+}
+#players
+{
+position: relative;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+padding: 5%;
+justify-items: center;
+}
+.pcard
+{
+width: 200px;
+height: 350px;
+background-color: whitesmoke;
+border: 3px solid grey;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+box-shadow: grey 5px 5px 20px;
+}
+#twitter
+{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: auto;
+justify-items: center;
+align-content: center;
+}
+.tcard
+{
+width:25vw;
+}
+.soon
+{
+position: relative;
+margin: 10%;
+text-align: center;
+width: 80%;
+height: 350px;
+background-color: darkgray;
+color: aliceblue;
+font-size: 10vw;
+}
+button
+{
+outline: none;
+margin-top: 23px;
+background-color: black;
+border: 0;
+color: white;
+font-size: 20px;
+padding: 0;
+text-align: left;
+}
+button:hover
+{
+color: darkgray;
+}
+.desktop{
+  display: inline;
+}
+.desktopcard{
+  display: grid;
+}
+.mobile{
+ display: none;
+}
+.card1{
+
+}
+.title
+{
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+width: 100%;
+height: 200px;
+margin-bottom: 5%;
+background-color: black;
+box-shadow: grey -5px 5px 20px;
+display: grid;
+grid-template-columns: 0.8fr 3fr 4fr;
+grid-template-rows: auto;
+grid-template-areas:
+    "LOGO OTHER THING"
+}
+.fh{
+  margin-bottom: 15px; 
+  margin-top: 100px;
+}
+.logoimage{
+  width: 12vw;
+}
+/*media query make the folowing changes if screen width is below 652px*/
+@media screen and (max-width:652px){
+  .mobile{
+    display: inline;
+  }
+  .desktop{
+    display: none;
+  }
+  .desktopcard{
+    display: none;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr ;
+  }
+  .card1{
+    border-right: white;
+  }
+  .title{
+    grid-template-columns: 1fr 1fr;
+  }
+  footer{
+    grid-template-columns: 1fr ;
+  }
+  .fh{
+    margin-top: 3vw;
+  }
+  .logoimage{
+    width: 20vw;
+  }
+  .other{
+    font-size: 13vw;
+  }
+  #twitter{
+    
+    display: none;
+  }
+  #players{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/*media query make the folowing changes if screen width is below 1080px*/
+@media screen and (max-width:1080px){
+  #players{
+    grid-template-columns: 1fr 1fr;
+  }
+  #twitter{
+    grid-template-columns: 1fr 1fr;
+  }
+  .pcard{
+    margin: 3vw;
+  }
+}
